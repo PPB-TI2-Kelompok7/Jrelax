@@ -1,4 +1,0 @@
-enum UserType {
-  psychiatrist,
-  patient
-}
