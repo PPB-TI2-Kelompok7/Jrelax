@@ -1,5 +1,6 @@
 # Medic
 Aplikasi untuk membantu penyakit mental
+![https://raw.githubusercontent.com/PPB-TI2-Kelompok7/Tubes-Medic/main/ss.jpg]
 
 ### TUGAS BESAR MATA KULIAH PEMROGRAMAN PERANGKAT BERGERAK
 
