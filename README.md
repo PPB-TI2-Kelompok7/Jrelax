@@ -1,4 +1,4 @@
-# Medic
+# Medics
 Aplikasi untuk membantu penyakit mental
 
 
