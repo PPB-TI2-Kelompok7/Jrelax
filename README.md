@@ -36,7 +36,7 @@ Kami adalah tim yang berdedikasi dari kelas TI-2, bekerja sama untuk menciptakan
 ## Teknologi yang Digunakan
 
 - **Frontend**: [Dart dan Flutter](https://flutter.dev/)
-- **Backend**:[Firebase](https://firebase.google.com/)
+- **Backend**: [Firebase](https://firebase.google.com/)
 
 ## Cara Memulai
 
