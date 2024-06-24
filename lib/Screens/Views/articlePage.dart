@@ -73,7 +73,7 @@ class articlePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
+                  prefixIconColor: const Color.fromARGB(255, 18, 56, 114),
                   label: Text("Search doctor, drugs, articles..."),
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   border: OutlineInputBorder(
@@ -118,7 +118,7 @@ class articlePage extends StatelessWidget {
                       height: 20,
                       width: 120,
                       decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 2, 173, 131),
+                        color: Color.fromARGB(255, 18, 56, 114),
                         borderRadius: BorderRadius.all(
                           Radius.circular(12),
                         ),
@@ -140,7 +140,7 @@ class articlePage extends StatelessWidget {
                       height: 20,
                       width: 120,
                       decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 2, 173, 131),
+                        color: Color.fromARGB(255, 18, 56, 114),
                         borderRadius: BorderRadius.all(
                           Radius.circular(12),
                         ),
@@ -162,7 +162,7 @@ class articlePage extends StatelessWidget {
                       height: 20,
                       width: 120,
                       decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 2, 173, 131),
+                        color: Color.fromARGB(255, 18, 56, 114),
                         borderRadius: BorderRadius.all(
                           Radius.circular(12),
                         ),
@@ -187,7 +187,7 @@ class articlePage extends StatelessWidget {
                       height: 20,
                       width: 120,
                       decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 2, 173, 131),
+                        color: Color.fromARGB(255, 18, 56, 114),
                         borderRadius: BorderRadius.all(
                           Radius.circular(12),
                         ),
@@ -322,7 +322,7 @@ class articlePage extends StatelessWidget {
                                     "5min Read",
                                     style: GoogleFonts.poppins(
                                         fontSize: 11.sp,
-                                        color: Color.fromARGB(255, 0, 136, 102),
+                                        color: Color.fromARGB(255, 18, 56, 114),
                                         fontWeight: FontWeight.w500),
                                   ),
                                 ],
@@ -380,7 +380,7 @@ class articlePage extends StatelessWidget {
                                             fontSize: 10,
                                             fontWeight: FontWeight.w500,
                                             color: Color.fromARGB(
-                                                255, 6, 110, 102)),
+                                                255, 18, 56, 114)),
                                       ),
                                     ]),
                               ),
@@ -417,7 +417,7 @@ class articlePage extends StatelessWidget {
                                     "5min Read",
                                     style: GoogleFonts.poppins(
                                         fontSize: 11.sp,
-                                        color: Color.fromARGB(255, 0, 136, 102),
+                                        color: Color.fromARGB(255, 18, 56, 114),
                                         fontWeight: FontWeight.w500),
                                   ),
                                 ],
@@ -475,7 +475,7 @@ class articlePage extends StatelessWidget {
                                             fontSize: 10,
                                             fontWeight: FontWeight.w500,
                                             color: Color.fromARGB(
-                                                255, 6, 110, 102)),
+                                                255, 18, 56, 114)),
                                       ),
                                     ]),
                               ),
@@ -512,7 +512,7 @@ class articlePage extends StatelessWidget {
                                     "5min Read",
                                     style: GoogleFonts.poppins(
                                         fontSize: 11.sp,
-                                        color: Color.fromARGB(255, 0, 136, 102),
+                                        color: Color.fromARGB(255, 18, 56, 114),
                                         fontWeight: FontWeight.w500),
                                   ),
                                 ],

@@ -25,7 +25,7 @@ class _HomepageState extends State<Homepage> {
     Dashboard(), // You can replace this with your actual pages
     message_tab_all(),
     shedule_screen(),
-    Profile_screen()
+    ProfileScreen()
   ];
 
   @override
@@ -40,7 +40,7 @@ class _HomepageState extends State<Homepage> {
         height: 80,
         splashSpeedInMilliseconds: 300,
         gapLocation: GapLocation.none,
-        activeColor: const Color.fromARGB(255, 0, 190, 165),
+        activeColor: const Color.fromARGB(255, 18, 56, 114),
         inactiveColor: const Color.fromARGB(255, 223, 219, 219),
         onTap: (int tappedIndex) {
           setState(() {

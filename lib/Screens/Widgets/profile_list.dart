@@ -2,12 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class profile_list extends StatelessWidget {
+class ProfileList extends StatelessWidget {
   final String title;
   final String image;
   final Color color;
+  final Color backgroundColor; // Tambahkan ini
 
-  profile_list({required this.image, required this.title, required this.color});
+  ProfileList({
+    required this.image,
+    required this.title,
+    required this.color,
+    required this.backgroundColor, // Tambahkan ini
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +25,11 @@ class profile_list extends StatelessWidget {
           Container(
             height: MediaQuery.of(context).size.height * 0.06,
             width: MediaQuery.of(context).size.width * 0.9,
+            decoration: BoxDecoration(
+              // Tambahkan ini
+              color: backgroundColor, // Tambahkan ini
+              borderRadius: BorderRadius.circular(10), // Tambahkan ini
+            ),
             child: Row(children: [
               Container(
                 height: MediaQuery.of(context).size.height * 0.06,

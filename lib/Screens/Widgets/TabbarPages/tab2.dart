@@ -35,7 +35,7 @@ class tab2 extends StatelessWidget {
                       child: Image.asset("lib/icons/lock.png"),
                     ),
                   ),
-                  prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
+                  prefixIconColor: const Color.fromARGB(255, 18, 56, 114),
                   label: Text("Enter your password"),
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   border: OutlineInputBorder(
@@ -53,7 +53,7 @@ class tab2 extends StatelessWidget {
               // Perform verification or other actions here
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Color.fromARGB(255, 3, 190, 150),
+              backgroundColor: Color.fromARGB(255, 18, 56, 114),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),

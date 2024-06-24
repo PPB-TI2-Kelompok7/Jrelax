@@ -1,10 +1,12 @@
 // ignore_for_file: camel_case_types, library_private_types_in_public_api, sized_box_for_whitespace
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Widgets/TabbarPages/tab1.dart';
 import 'package:medical/Screens/Widgets/TabbarPages/tab2.dart';
 import 'package:medical/Screens/Login-Signup/login.dart';
+import 'package:medical/auth/auth_password_exception.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -19,16 +21,32 @@ class _TabBarExampleState extends State<forgot_pass>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
+  final _key = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
+  static final auth = FirebaseAuth.instance;
+  static late AuthStatus _status;
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    tabController.dispose();
+    super.dispose();
+  }
+
+  Future<AuthStatus> resetPassword({required String email}) async {
+    await auth
+        .sendPasswordResetEmail(email: email)
+        .then((value) => _status = AuthStatus.successful)
+        .catchError(
+            (e) => _status = AuthExceptionHandler.handleAuthException(e));
+
+    return _status;
+  }
+
   @override
   void initState() {
     super.initState();
     tabController = TabController(length: 2, vsync: this);
-  }
-
-  @override
-  void dispose() {
-    tabController.dispose();
-    super.dispose();
   }
 
   @override
@@ -119,7 +137,7 @@ class _TabBarExampleState extends State<forgot_pass>
                                     const Color.fromARGB(255, 241, 241, 241),
                                 unselectedLabelColor: Colors.grey,
                                 labelColor:
-                                    const Color.fromARGB(255, 3, 190, 150),
+                                    const Color.fromARGB(255, 18, 56, 114),
                                 controller: tabController,
                                 tabs: [
                                   Tab(

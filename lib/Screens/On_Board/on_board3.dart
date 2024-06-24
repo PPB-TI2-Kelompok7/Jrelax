@@ -8,7 +8,7 @@ class on_board3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Color.fromARGB(255, 228, 241, 255),
       child: Column(children: [
         SizedBox(
           height: 40,
@@ -20,7 +20,7 @@ class on_board3 extends StatelessWidget {
               image: DecorationImage(
                   alignment: Alignment.bottomCenter,
                   image: AssetImage(
-                    "images/doctor3.png",
+                    "images/front3.png",
                   ),
                   filterQuality: FilterQuality.high)),
         ),
@@ -38,15 +38,15 @@ class on_board3 extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Color.fromARGB(255, 247, 247, 247),
-                      const Color.fromARGB(255, 255, 255, 255),
+                      Color.fromARGB(255, 228, 241, 255),
+                      const Color.fromARGB(255, 228, 241, 255),
                     ],
                   ),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(25),
                   child: Text(
-                    "Get connect our Online\nConsultation",
+                    "Layanan Terlengkap",
                     style: GoogleFonts.inter(
                         fontSize: 18.sp,
                         fontWeight: FontWeight.bold,

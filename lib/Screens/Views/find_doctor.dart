@@ -73,7 +73,7 @@ class find_doctor extends StatelessWidget {
                       ),
                     ),
                   ),
-                  prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
+                  prefixIconColor: const Color.fromARGB(255, 18, 56, 114),
                   label: Text("Search doctor, drugs, articles..."),
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   border: OutlineInputBorder(

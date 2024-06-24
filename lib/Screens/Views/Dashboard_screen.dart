@@ -93,7 +93,7 @@ class Dashboard extends StatelessWidget {
                       ),
                     ),
                   ),
-                  prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
+                  prefixIconColor: const Color.fromARGB(255, 18, 56, 114),
                   label: Text("Search doctor, drugs, articles..."),
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   border: OutlineInputBorder(
@@ -152,7 +152,7 @@ class Dashboard extends StatelessWidget {
                     "See all",
                     style: GoogleFonts.inter(
                       fontSize: 16.sp,
-                      color: const Color.fromARGB(255, 3, 190, 150),
+                      color: const Color.fromARGB(255, 18, 56, 114),
                     ),
                   ),
                 ),
@@ -221,7 +221,7 @@ class Dashboard extends StatelessWidget {
                     "See all",
                     style: GoogleFonts.inter(
                       fontSize: 16.sp,
-                      color: const Color.fromARGB(255, 3, 190, 150),
+                      color: const Color.fromARGB(255, 18, 56, 114),
                     ),
                   ),
                 ),

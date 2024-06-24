@@ -307,7 +307,7 @@ class appointment extends StatelessWidget {
                       "\$61.00",
                       style: GoogleFonts.poppins(
                           fontSize: 16.sp,
-                          color: Color.fromARGB(255, 4, 92, 58),
+                          color: Color.fromARGB(255, 18, 56, 114),
                           fontWeight: FontWeight.w600),
                     ),
                   ],
@@ -418,7 +418,7 @@ class appointment extends StatelessWidget {
                             height: MediaQuery.of(context).size.height * 0.06,
                             width: MediaQuery.of(context).size.width * 0.4300,
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 2, 179, 149),
+                              color: Color.fromARGB(255, 18, 56, 114),
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Row(

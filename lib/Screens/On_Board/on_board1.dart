@@ -10,7 +10,7 @@ class on_board1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Color.fromARGB(255, 228, 241, 255),
       child: Column(children: [
         const SizedBox(
           height: 40,
@@ -22,7 +22,7 @@ class on_board1 extends StatelessWidget {
               image: DecorationImage(
                   alignment: Alignment.bottomCenter,
                   image: AssetImage(
-                    "images/doctor1.png",
+                    "images/front1.png",
                   ),
                   filterQuality: FilterQuality.high)),
         ),
@@ -40,15 +40,15 @@ class on_board1 extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Color.fromARGB(255, 247, 247, 247),
-                      const Color.fromARGB(255, 255, 255, 255),
+                      Color.fromARGB(255, 228, 241, 255),
+                      const Color.fromARGB(255, 228, 241, 255),
                     ],
                   ),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(25),
                   child: Text(
-                    "Consult only with a doctor\nyou trust",
+                    "Meditasi, Lelap \n& Jurnal",
                     style: GoogleFonts.inter(
                         fontSize: 18.sp,
                         fontWeight: FontWeight.bold,

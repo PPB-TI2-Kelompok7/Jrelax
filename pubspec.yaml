@@ -47,6 +47,9 @@ flutter:
     - images/article1.png
     - images/capsules.png
     - images/capsules2.png
+    - images/front1.png
+    - images/front2.png
+    - images/front3.png
     - lib/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see

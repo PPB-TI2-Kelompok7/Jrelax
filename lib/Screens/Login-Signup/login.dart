@@ -7,7 +7,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:medical/Screens/Login-Signup/login_signup.dart';
 import 'package:medical/Screens/Login-Signup/register.dart';
 import 'package:medical/Screens/Views/Homepage.dart';
-import 'package:medical/Screens/Widgets/Auth_text_field.dart';
 import 'package:medical/Screens/Widgets/auth_social_login.dart';
 import 'package:medical/bloc/login/login_cubit.dart';
 import 'package:page_transition/page_transition.dart';
@@ -22,57 +21,56 @@ class login extends StatefulWidget {
 
 class _loginState extends State<login> {
   final _formKey = GlobalKey<FormState>();
-  Future<UserCredential> signInWithGoogle() async {
-    // Trigger the authentication flow
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
-    // Obtain the auth details from the request
+  Future<UserCredential> signInWithGoogle() async {
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
     final GoogleSignInAuthentication? googleAuth =
         await googleUser?.authentication;
-
-    // Create a new credential
     final credential = GoogleAuthProvider.credential(
       accessToken: googleAuth?.accessToken,
       idToken: googleAuth?.idToken,
     );
-
-    // Once signed in, return the UserCredential
     return await FirebaseAuth.instance.signInWithCredential(credential).then(
-        (value) async => await Navigator.pushAndRemoveUntil(
+          (value) async => await Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(builder: (context) => Homepage()),
-            (route) => false));
+            (route) => false,
+          ),
+        );
   }
 
   @override
   Widget build(BuildContext context) {
-    final emailController = TextEditingController();
-    final passwordController = TextEditingController();
-
     return Scaffold(
       backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
       appBar: AppBar(
         leading: IconButton(
           icon: Container(
-              height: MediaQuery.of(context).size.height * 0.06,
-              width: MediaQuery.of(context).size.width * 0.06,
-              child: Image.asset("lib/icons/back2.png")),
+            height: MediaQuery.of(context).size.height * 0.06,
+            width: MediaQuery.of(context).size.width * 0.06,
+            child: Image.asset("lib/icons/back2.png"),
+          ),
           onPressed: () {
             Navigator.push(
-                context,
-                PageTransition(
-                    type: PageTransitionType.leftToRight,
-                    child: login_signup()));
+              context,
+              PageTransition(
+                type: PageTransitionType.leftToRight,
+                child: login_signup(),
+              ),
+            );
           },
         ),
         centerTitle: true,
         title: Text(
           "Login",
           style: GoogleFonts.inter(
-              color: Colors.black87,
-              fontSize: 22.sp,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 0),
+            color: Colors.black87,
+            fontSize: 22.sp,
+            fontWeight: FontWeight.w700,
+            letterSpacing: 0,
+          ),
         ),
         toolbarHeight: 110,
         backgroundColor: Colors.white,
@@ -98,7 +96,7 @@ class _loginState extends State<login> {
               ..hideCurrentSnackBar()
               ..showSnackBar(SnackBar(
                 content: Text(state.msg),
-                backgroundColor: Colors.green,
+                backgroundColor: Color.fromARGB(255, 18, 56, 114),
               ));
             Navigator.pushNamedAndRemoveUntil(
                 context, '/mainmenu', (route) => false);
@@ -115,7 +113,6 @@ class _loginState extends State<login> {
                 icon: "lib/icons/email.png",
                 controller: emailController,
                 validator: (value) {
-                  // Kurung kurawal dibuka di sini
                   if (value == null || value.isEmpty) {
                     return 'Please enter your email';
                   }
@@ -123,33 +120,53 @@ class _loginState extends State<login> {
                     return 'Please enter a valid email';
                   }
                   return null;
-                }, // Kurung kurawal ditutup di sini
+                },
               ),
               const SizedBox(
                 height: 5,
               ),
-              // Text field Password
               AuthTextField(
                 text: "Enter your password",
                 icon: "lib/icons/lock.png",
                 controller: passwordController,
+                isPassword: true, // Tambahkan isPassword dengan nilai true
               ),
-              Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                GestureDetector(
-                  onTap: () {
-                    context.read<LoginCubit>().login(
-                        email: emailController.text,
-                        password: passwordController.text);
-                  },
-                  child: Text(
-                    "Forgot your password?",
-                    style: GoogleFonts.poppins(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      context.read<LoginCubit>().login(
+                            email: emailController.text,
+                            password: passwordController.text,
+                          );
+                    },
+                    child: Text(
+                      "",
+                      style: GoogleFonts.poppins(
                         fontSize: 15.sp,
-                        color: const Color.fromARGB(255, 3, 190, 150),
-                        fontWeight: FontWeight.w500),
+                        color: const Color.fromARGB(255, 18, 56, 114),
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                   ),
-                )
-              ]),
+                  SizedBox(
+                      width: 10), // Adding some space between the two elements
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/forgetPassword');
+                    },
+                    child: Text(
+                      "Forgot your password?",
+                      style: GoogleFonts.poppins(
+                        fontSize: 15.sp,
+                        color: const Color.fromARGB(255, 18, 56, 114),
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               SizedBox(
                 height: 10,
               ),
@@ -163,7 +180,7 @@ class _loginState extends State<login> {
                         password: passwordController.text);
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 3, 190, 150),
+                    backgroundColor: Color.fromARGB(255, 18, 56, 114),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
@@ -189,21 +206,25 @@ class _loginState extends State<login> {
                   Text(
                     "Don't have an account? ",
                     style: GoogleFonts.poppins(
-                        fontSize: 15.sp, color: Colors.black87),
+                      fontSize: 15.sp,
+                      color: Colors.black87,
+                    ),
                   ),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.rightToLeft,
-                              child: register()));
+                        context,
+                        PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          child: register(),
+                        ),
+                      );
                     },
                     child: Text(
                       "Sign Up",
                       style: GoogleFonts.poppins(
                         fontSize: 15.sp,
-                        color: const Color.fromARGB(255, 3, 190, 150),
+                        color: const Color.fromARGB(255, 18, 56, 114),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -235,19 +256,57 @@ class _loginState extends State<login> {
                 height: 30,
               ),
               auth_social_logins(
-                  logo: "images/google.png", text: "Sign in with Google"),
+                logo: "images/google.png",
+                text: "Sign in with Google",
+              ),
               const SizedBox(
                 height: 20,
               ),
               auth_social_logins(
-                  logo: "images/apple.png", text: "Sign in with Apple"),
+                logo: "images/apple.png",
+                text: "Sign in with Apple",
+              ),
               const SizedBox(
                 height: 20,
               ),
               auth_social_logins(
-                  logo: "images/facebook.png", text: "Sign in with Facebook")
+                logo: "images/facebook.png",
+                text: "Sign in with Facebook",
+              ),
             ]),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class AuthTextField extends StatelessWidget {
+  final String text;
+  final String icon;
+  final TextEditingController controller;
+  final String? Function(String?)? validator;
+  final bool isPassword; // Tambahkan parameter isPassword
+
+  AuthTextField({
+    required this.text,
+    required this.icon,
+    required this.controller,
+    this.validator,
+    this.isPassword = false, // Default ke false
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: controller,
+      validator: validator,
+      obscureText: isPassword, // Gunakan isPassword untuk mengatur obscureText
+      decoration: InputDecoration(
+        hintText: text,
+        prefixIcon: Image.asset(icon),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(30),
         ),
       ),
     );

@@ -172,7 +172,7 @@ class verification_code extends StatelessWidget {
                 // Perform verification or other actions here
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 3, 190, 150),
+                backgroundColor: Color.fromARGB(255, 18, 56, 114),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
@@ -204,7 +204,7 @@ class verification_code extends StatelessWidget {
                 "Resend",
                 style: GoogleFonts.poppins(
                   fontSize: 15.sp,
-                  color: const Color.fromARGB(255, 3, 190, 150),
+                  color: const Color.fromARGB(255, 18, 56, 114),
                   fontWeight: FontWeight.w600,
                 ),
               ),

@@ -31,7 +31,7 @@ class message_all_widget extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width * 0.1500,
               decoration: BoxDecoration(
-                  color: Colors.green,
+                  color: Color.fromARGB(255, 18, 56, 114),
                   shape: BoxShape.circle,
                   image: DecorationImage(
                       image: AssetImage(image),

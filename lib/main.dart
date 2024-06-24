@@ -1,9 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:medical/Screens/Login-Signup/Profile_screen.dart';
+import 'package:medical/Screens/Login-Signup/forgot_pass.dart';
 import 'package:medical/Screens/Login-Signup/login.dart';
 import 'package:medical/Screens/Views/Dashboard_screen.dart';
 import 'package:medical/Screens/Views/Screen1.dart';
+import 'package:medical/Screens/Views/updateprofilescreen.dart';
 import 'package:medical/bloc/login/login_cubit.dart';
 import 'package:medical/bloc/register/register_cubit.dart';
 import 'package:medical/firebase_options.dart';
@@ -37,6 +40,9 @@ class Medics extends StatelessWidget {
             // When navigating to the "/second" route, build the SecondScreen widget.
             '/login': (context) => login(),
             '/mainmenu': (context) => Dashboard(),
+            '/profile': (context) => ProfileScreen(),
+            '/updateProfile': (context) => UpdateProfileScreen(),
+            '/forgetPassword': (context) => forgot_pass()
           },
         );
       }),

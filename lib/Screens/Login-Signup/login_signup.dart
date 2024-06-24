@@ -69,7 +69,7 @@ class login_signup extends StatelessWidget {
                       type: PageTransitionType.rightToLeft, child: login()));
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Color.fromARGB(255, 3, 190, 150),
+              backgroundColor: Color.fromARGB(255, 18, 56, 114),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
@@ -113,7 +113,7 @@ class login_signup extends StatelessWidget {
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 18.sp,
-                color: Color.fromARGB(255, 3, 190, 150),
+                color: Color.fromARGB(255, 18, 56, 114),
                 fontWeight: FontWeight.w500,
                 letterSpacing: 0,
               ),

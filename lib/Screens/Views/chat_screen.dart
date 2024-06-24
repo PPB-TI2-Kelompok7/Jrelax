@@ -278,7 +278,7 @@ class chat_screen extends StatelessWidget {
                             child: Image.asset("lib/icons/pin.png"),
                           ),
                         ),
-                        prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
+                        prefixIconColor: const Color.fromARGB(255, 18, 56, 114),
                         label: Text("Type message ..."),
                         floatingLabelBehavior: FloatingLabelBehavior.never,
                         border: OutlineInputBorder(

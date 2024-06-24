@@ -59,8 +59,8 @@ class _on_boardingState extends State<on_boarding> {
                     dotWidth: 14.0,
                     dotHeight: 7.0,
                     strokeWidth: 1.5,
-                    dotColor: Color.fromARGB(255, 170, 255, 237),
-                    activeDotColor: const Color.fromARGB(255, 3, 190, 150)),
+                    dotColor: Color.fromARGB(255, 37, 113, 226),
+                    activeDotColor: const Color.fromARGB(255, 18, 56, 114)),
               ),
               onLastpage
                   ? GestureDetector(
@@ -75,7 +75,7 @@ class _on_boardingState extends State<on_boarding> {
                         height: MediaQuery.of(context).size.height * 0.05,
                         width: MediaQuery.of(context).size.width * 0.3,
                         decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 3, 190, 150),
+                            color: const Color.fromARGB(255, 18, 56, 114),
                             borderRadius: BorderRadius.circular(35)),
                         child: Center(
                           child: Row(
@@ -109,7 +109,7 @@ class _on_boardingState extends State<on_boarding> {
                         height: MediaQuery.of(context).size.height * 0.05,
                         width: MediaQuery.of(context).size.width * 0.3,
                         decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 3, 190, 150),
+                            color: const Color.fromARGB(255, 18, 56, 114),
                             borderRadius: BorderRadius.circular(35)),
                         child: Center(
                           child: Row(

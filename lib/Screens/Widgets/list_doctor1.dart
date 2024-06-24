@@ -96,7 +96,7 @@ class list_doctor1 extends StatelessWidget {
                             numRating,
                             style: GoogleFonts.poppins(
                                 fontSize: 11.sp,
-                                color: Color.fromARGB(255, 4, 179, 120),
+                                color: Color.fromARGB(255, 18, 56, 114),
                                 fontWeight: FontWeight.bold),
                           ),
                         ]),
