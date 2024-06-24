@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "880041675290",
+    "project_id": "medic-4884e",
+    "storage_bucket": "medic-4884e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880041675290:android:83a3eee2980461a2401fa3",
+        "android_client_info": {
+          "package_name": "com.example.medics"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpWv-vxG9LurojbNyWSmVVuxbY_R1Svr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

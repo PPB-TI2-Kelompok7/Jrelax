@@ -63,7 +63,7 @@ class Profile_screen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Amelia Renata",
+                  "Muhammad Makhdum Wahid",
                   style: GoogleFonts.poppins(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w600,

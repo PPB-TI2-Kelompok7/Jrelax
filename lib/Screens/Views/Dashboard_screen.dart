@@ -39,7 +39,7 @@ class Dashboard extends StatelessWidget {
               height: 50,
             ),
             Text(
-              "Find your desire\nhealth solution",
+              "Find your desire\nmental health solution",
               style: GoogleFonts.inter(
                   color: Color.fromARGB(255, 51, 47, 47),
                   fontSize: 20.sp,
@@ -112,7 +112,7 @@ class Dashboard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               listIcons(Icon: "lib/icons/Doctor.png", text: "Doctor"),
-              listIcons(Icon: "lib/icons/Pharmacy.png", text: "Pharmacy"),
+              listIcons(Icon: "lib/icons/Pharmacy.png", text: "Therapy"),
               listIcons(Icon: "lib/icons/Hospital.png", text: "Hospital"),
               listIcons(Icon: "lib/icons/Ambulance.png", text: "Ambulance"),
             ],
@@ -176,7 +176,7 @@ class Dashboard extends StatelessWidget {
                       image: "lib/icons/male-doctor.png",
                       maintext: "Dr. Marcus Horizon",
                       numRating: "4.7",
-                      subtext: "Chardiologist"),
+                      subtext: "Psikiater"),
                   list_doctor1(
                       distance: "130m Away",
                       image: "lib/icons/docto3.png",
@@ -202,7 +202,7 @@ class Dashboard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Health article",
+                  "Mental Health article",
                   style: GoogleFonts.inter(
                     fontSize: 18.sp,
                     fontWeight: FontWeight.w700,
@@ -237,7 +237,7 @@ class Dashboard extends StatelessWidget {
               dateText: "Jun 10, 2021 ",
               duration: "5min read",
               mainText:
-                  "The 25 Healthiest Fruits You Can Eat,\nAccording to a Nutritionist"),
+                  "The 25 Healthiest Fruits You Can Eat,\nFor your Mental Health"),
         ]),
       ),
     );

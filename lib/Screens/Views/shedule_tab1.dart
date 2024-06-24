@@ -14,7 +14,7 @@ class shedule_tab1 extends StatelessWidget {
         ),
         shedule_card(
           confirmation: "Confirmed",
-          mainText: "Dr. Marcus Horizon",
+          mainText: "Dr. Tirta Mandira Hudi",
           subText: "Chardiologist",
           date: "26/06/2022",
           time: "10:30 AM",
@@ -26,7 +26,7 @@ class shedule_tab1 extends StatelessWidget {
         shedule_card(
           confirmation: "Confirmed",
           mainText: "Dr. Marcus Horizon",
-          subText: "Chardiologist",
+          subText: "Psikiater",
           date: "26/06/2022",
           time: "2:00 PM",
           image: "lib/icons/female-doctor2.png",
